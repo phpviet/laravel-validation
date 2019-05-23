@@ -15,6 +15,7 @@
     ],
     "require": {
         "php": "^7.1",
+        "phpviet/validation": "^1.0",
         "illuminate/support": "^5.7"
     },
     "autoload": {
