@@ -1,0 +1,38 @@
+{
+    "name": "phpviet/laravel-validation",
+    "description": "Laravel validation hổ trợ kiểm tra dữ liệu đặc thù trong nước",
+    "keywords": [
+        "phpviet",
+        "laravel-validation"
+    ],
+    "homepage": "https://github.com/phpviet/laravel-validation",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vuong Xuong Minh",
+            "email": "vuongxuongminh@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPViet\\Laravel\\Validation\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PHPViet\\Laravel\\Validation\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+	}
+}
