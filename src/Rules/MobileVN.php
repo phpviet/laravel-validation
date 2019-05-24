@@ -8,7 +8,7 @@
 
 namespace PHPViet\Laravel\Validation\Rules;
 
-use PHPVIet\Validation\Validator;
+use PHPViet\Validation\Validator;
 
 /**
  * @author Vuong Minh <vuongxuongminh@gmail.com>
