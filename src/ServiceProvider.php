@@ -20,11 +20,9 @@ use Illuminate\Support\ServiceProvider as BaseServiceProvider;
  */
 class ServiceProvider extends BaseServiceProvider
 {
-
     public function boot(): void
     {
         if (isset($this->app['validator'])) {
-
             foreach ($this->getCallableRules() as $name => $rule) {
                 $this->app['validator']->extend($name, $rule, $rule->message());
             }
@@ -39,7 +37,7 @@ class ServiceProvider extends BaseServiceProvider
             'id_vn' => $this->app->make(IdVN::class),
             'ip_vn' => $this->app->make(IpVN::class),
             'ipv4_vn' => $this->app->make(IpVN::class, [IpVN::IPV4]),
-            'ipv6_vn' => $this->app->make(IpVN::class, [IpVN::IPV6])
+            'ipv6_vn' => $this->app->make(IpVN::class, [IpVN::IPV6]),
         ];
     }
 }

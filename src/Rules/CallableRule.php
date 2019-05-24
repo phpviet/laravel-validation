@@ -16,7 +16,6 @@ use Illuminate\Contracts\Validation\Rule;
  */
 abstract class CallableRule implements Rule
 {
-
     /**
      * Hổ trợ sử dụng rule dưới dạng extension.
      *
@@ -30,5 +29,4 @@ abstract class CallableRule implements Rule
     {
         return $this->passes($attribute, $value);
     }
-
 }

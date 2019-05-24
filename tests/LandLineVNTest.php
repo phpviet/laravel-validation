@@ -17,7 +17,6 @@ use PHPViet\Laravel\Validation\Rules\LandLineVN;
  */
 class LandLineVNTest extends TestCase
 {
-
     public function testValidId()
     {
         $rule = new LandLineVN();
@@ -26,9 +25,9 @@ class LandLineVNTest extends TestCase
         $this->assertTrue($rule('attribute', $landLine, null, null));
 
         $validLandLine = $this->app['validator']->validate([
-            'landLine' => $landLine
+            'landLine' => $landLine,
         ], [
-            'landLine' => 'land_line_vn'
+            'landLine' => 'land_line_vn',
         ]);
         $this->assertEquals($landLine, array_shift($validLandLine));
     }
@@ -41,9 +40,9 @@ class LandLineVNTest extends TestCase
         $this->assertFalse($rule('attribute', $landLine, null, null));
         $this->expectException('Illuminate\Validation\ValidationException');
         $this->app['validator']->validate([
-            'landLine' => $landLine
+            'landLine' => $landLine,
         ], [
-            'landLine' => 'land_line_vn'
+            'landLine' => 'land_line_vn',
         ]);
     }
 
@@ -56,5 +55,4 @@ class LandLineVNTest extends TestCase
         $rule->passes('attribute', '02838574955!!!');
         $this->assertEquals('land_line', $rule->message());
     }
-
 }
