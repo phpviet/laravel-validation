@@ -18,6 +18,9 @@
         "phpviet/validation": "^1.0",
         "illuminate/support": "^5.7"
     },
+    "require-dev": {
+        "orchestra/testbench": "^3.7"
+    },
     "autoload": {
         "psr-4": {
             "PHPViet\\Laravel\\Validation\\": "src"
@@ -34,6 +37,11 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "PHPViet\\Laravel\\Validation\\ServiceProvider"
+            ]
         }
 	}
 }
