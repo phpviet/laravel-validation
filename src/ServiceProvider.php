@@ -8,7 +8,7 @@
 
 namespace PHPViet\Laravel\Validation;
 
-use PHPViet\Validation\Rules\IdVN;
+use PHPViet\Laravel\Validation\Rules\IdVN;
 use PHPViet\Laravel\Validation\Rules\IpVN;
 use PHPViet\Laravel\Validation\Rules\MobileVN;
 use PHPViet\Laravel\Validation\Rules\LandLineVN;
@@ -34,12 +34,12 @@ class ServiceProvider extends BaseServiceProvider
     protected function getCallableRules(): array
     {
         return [
-            'land_line_vn' => new LandLineVN(),
-            'mobile_vn' => new MobileVN(),
-            'id_vn' => new IdVN(),
-            'ip_vn' => new IpVN(),
-            'ipv4_vn' => new IpVN(IpVN::IPV4),
-            'ipv6_vn' => new IpVN(IpVN::IPV6),
+            'land_line_vn' => $this->app->make(LandLineVN::class),
+            'mobile_vn' => $this->app->make(MobileVN::class),
+            'id_vn' => $this->app->make(IdVN::class),
+            'ip_vn' => $this->app->make(IpVN::class),
+            'ipv4_vn' => $this->app->make(IpVN::class, [IpVN::IPV4]),
+            'ipv6_vn' => $this->app->make(IpVN::class, [IpVN::IPV6])
         ];
     }
 }
