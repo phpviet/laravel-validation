@@ -17,7 +17,6 @@ use PHPViet\Laravel\Validation\Rules\IpVN;
  */
 class IpVNTest extends TestCase
 {
-
     public function testValidCases()
     {
         $rule = new IpVN();
@@ -37,15 +36,14 @@ class IpVNTest extends TestCase
         $this->assertFalse($ruleV6('attribute', $ipv4, null, null));
         $validIps = $this->app['validator']->validate([
             'ipv4' => $ipv4,
-            'ipv6' => $ipv6
+            'ipv6' => $ipv6,
         ], [
             'ipv4' => 'ip_vn|ipv4_vn',
-            'ipv6' => 'ip_vn|ipv6_vn'
+            'ipv6' => 'ip_vn|ipv6_vn',
         ]);
         $this->assertEquals($ipv4, $validIps['ipv4']);
         $this->assertEquals($ipv6, $validIps['ipv6']);
     }
-
 
     public function testInvalidCases()
     {
@@ -55,9 +53,9 @@ class IpVNTest extends TestCase
         $this->assertFalse($rule('attribute', $ip, null, null));
         $this->expectException('Illuminate\Validation\ValidationException');
         $this->app['validator']->validate([
-            'ip' => $ip
+            'ip' => $ip,
         ], [
-            'ip' => 'ip_vn|ipv4_vn|ipv6_vn'
+            'ip' => 'ip_vn|ipv4_vn|ipv6_vn',
         ]);
     }
 
@@ -70,5 +68,4 @@ class IpVNTest extends TestCase
         $rule->passes('attribute', '113.173.134.203@');
         $this->assertEquals('ip', $rule->message());
     }
-
 }

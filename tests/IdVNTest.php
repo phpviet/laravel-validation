@@ -17,7 +17,6 @@ use PHPViet\Laravel\Validation\Rules\IdVN;
  */
 class IdVNTest extends TestCase
 {
-
     public function testValidId()
     {
         $rule = new IdVN();
@@ -26,9 +25,9 @@ class IdVNTest extends TestCase
         $this->assertTrue($rule('attribute', $id, null, null));
 
         $validId = $this->app['validator']->validate([
-            'id' => $id
+            'id' => $id,
         ], [
-            'id' => 'id_vn'
+            'id' => 'id_vn',
         ]);
         $this->assertEquals($id, array_shift($validId));
     }
@@ -41,9 +40,9 @@ class IdVNTest extends TestCase
         $this->assertFalse($rule('attribute', $id, null, null));
         $this->expectException('Illuminate\Validation\ValidationException');
         $this->app['validator']->validate([
-            'id' => $id
+            'id' => $id,
         ], [
-            'id' => 'id_vn'
+            'id' => 'id_vn',
         ]);
     }
 
@@ -56,5 +55,4 @@ class IdVNTest extends TestCase
         $rule->passes('attribute', '025479661123123123123!!!');
         $this->assertEquals('id', $rule->message());
     }
-
 }

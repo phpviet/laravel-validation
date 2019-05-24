@@ -17,7 +17,6 @@ use PHPViet\Laravel\Validation\Rules\MobileVN;
  */
 class MobileVNTest extends TestCase
 {
-
     public function testValidId()
     {
         $rule = new MobileVN();
@@ -26,9 +25,9 @@ class MobileVNTest extends TestCase
         $this->assertTrue($rule('attribute', $mobile, null, null));
 
         $validMobile = $this->app['validator']->validate([
-            'mobile' => $mobile
+            'mobile' => $mobile,
         ], [
-            'mobile' => 'mobile_vn'
+            'mobile' => 'mobile_vn',
         ]);
         $this->assertEquals($mobile, array_shift($validMobile));
     }
@@ -41,9 +40,9 @@ class MobileVNTest extends TestCase
         $this->assertFalse($rule('attribute', $mobile, null, null));
         $this->expectException('Illuminate\Validation\ValidationException');
         $this->app['validator']->validate([
-            'mobile' => $mobile
+            'mobile' => $mobile,
         ], [
-            'mobile' => 'mobile_vn'
+            'mobile' => 'mobile_vn',
         ]);
     }
 
@@ -56,5 +55,4 @@ class MobileVNTest extends TestCase
         $rule->passes('attribute', '0909113911!!!');
         $this->assertEquals('mobile', $rule->message());
     }
-
 }

@@ -17,7 +17,6 @@ use PHPViet\Validation\Rules\IpVN as BaseIpVN;
  */
 class IpVN extends CallableRule
 {
-
     const IPV4 = BaseIpVN::IPV4;
 
     const IPV6 = BaseIpVN::IPV6;
@@ -38,7 +37,7 @@ class IpVN extends CallableRule
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function passes($attribute, $value): bool
     {
@@ -46,7 +45,7 @@ class IpVN extends CallableRule
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function message(): string
     {
@@ -63,5 +62,4 @@ class IpVN extends CallableRule
 
         }
     }
-
 }
