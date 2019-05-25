@@ -29,6 +29,6 @@ class MobileVN extends CallableRule
      */
     public function message(): string
     {
-        return __('validation.phpviet.mobile');
+        return __('phpVietValidation::validation.mobile');
     }
 }

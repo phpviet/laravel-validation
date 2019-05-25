@@ -61,11 +61,9 @@ class IpVNTest extends TestCase
 
     public function testCanTranslateErrorMessage()
     {
-        Lang::addLines([
-            'validation.phpviet.ip' => 'ip',
-        ], Lang::getLocale());
+        Lang::setLocale('vi');
         $rule = new IpVN();
         $rule->passes('attribute', '113.173.134.203@');
-        $this->assertEquals('ip', $rule->message());
+        $this->assertEquals(':attribute phải là ip Việt Nam.', $rule->message());
     }
 }

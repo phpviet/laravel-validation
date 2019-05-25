@@ -22,6 +22,20 @@ class ServiceProvider extends BaseServiceProvider
 {
     public function boot(): void
     {
+        $this->loadTrans();
+        $this->loadExt();
+    }
+
+    protected function loadTrans(): void
+    {
+        $this->publishes([
+            __DIR__ . '/../resources/lang' => resource_path('lang/vendor/phpVietValidation'),
+        ]);
+        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang/', 'phpVietValidation');
+    }
+
+    protected function loadExt(): void
+    {
         if (isset($this->app['validator'])) {
             foreach ($this->getCallableRules() as $name => $rule) {
                 $this->app['validator']->extend($name, $rule, $rule->message());

@@ -29,6 +29,6 @@ class LandLineVN extends CallableRule
      */
     public function message(): string
     {
-        return __('validation.phpviet.land_line');
+        return __('phpVietValidation::validation.land_line');
     }
 }

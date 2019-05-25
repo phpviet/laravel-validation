@@ -48,11 +48,9 @@ class IdVNTest extends TestCase
 
     public function testCanTranslateErrorMessage()
     {
-        Lang::addLines([
-            'validation.phpviet.id' => 'id',
-        ], Lang::getLocale());
+        Lang::setLocale('vi');
         $rule = new IdVN();
         $rule->passes('attribute', '025479661123123123123!!!');
-        $this->assertEquals('id', $rule->message());
+        $this->assertEquals(':attribute phải là số chứng minh thư hoặc thẻ căn cước tại Việt Nam.', $rule->message());
     }
 }

@@ -48,11 +48,9 @@ class LandLineVNTest extends TestCase
 
     public function testCanTranslateErrorMessage()
     {
-        Lang::addLines([
-            'validation.phpviet.land_line' => 'land_line',
-        ], Lang::getLocale());
+        Lang::setLocale('vi');
         $rule = new LandLineVN();
         $rule->passes('attribute', '02838574955!!!');
-        $this->assertEquals('land_line', $rule->message());
+        $this->assertEquals(':attribute phải là số điện thoại bàn tại Việt Nam.', $rule->message());
     }
 }

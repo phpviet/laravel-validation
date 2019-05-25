@@ -52,13 +52,13 @@ class IpVN extends CallableRule
         switch ($this->version) {
             case self::IPV4:
 
-                return __('validation.phpviet.ipv4');
+                return __('phpVietValidation::validation.ip.v4');
             case self::IPV6:
 
-                return __('validation.phpviet.ipv6');
+                return __('phpVietValidation::validation.ip.v6');
             default:
 
-                return __('validation.phpviet.ip');
+                return __('phpVietValidation::validation.ip.default');
 
         }
     }

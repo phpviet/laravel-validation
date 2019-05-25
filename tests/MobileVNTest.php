@@ -48,11 +48,9 @@ class MobileVNTest extends TestCase
 
     public function testCanTranslateErrorMessage()
     {
-        Lang::addLines([
-            'validation.phpviet.mobile' => 'mobile',
-        ], Lang::getLocale());
+        Lang::setLocale('vi');
         $rule = new MobileVN();
         $rule->passes('attribute', '0909113911!!!');
-        $this->assertEquals('mobile', $rule->message());
+        $this->assertEquals(':attribute phải là số di động tại Việt Nam.', $rule->message());
     }
 }
