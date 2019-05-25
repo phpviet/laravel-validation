@@ -166,6 +166,16 @@ public function rules()
 }
 ```
 
+## Ngôn ngữ
+
+Nếu như bạn muốn thay đổi các error message thì hãy publish resource đính kèm thông qua câu lệnh:
+
+```php
+php artisan vendor:publish
+```
+
+Sau khi publish xong bạn hãy vào `resources/lang/vendor/phpVietValidation` để thao tác chỉnh sửa theo ý bạn.
+
 ## Dành cho nhà phát triển
 
 Nếu như bạn cảm thấy các kiểu kiểm tra dữ liệu bên trên vẫn chưa đủ đối với thị trường 
