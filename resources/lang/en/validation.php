@@ -13,6 +13,6 @@ return [
     'ip' => [
         'v4' => ':attribute must be Vietnam ipv4.',
         'v6' => ':attribute must be Vietnam ipv6.',
-        'default' => ':attribute must be Vietnam ip.'
-    ]
+        'default' => ':attribute must be Vietnam ip.',
+    ],
 ];
