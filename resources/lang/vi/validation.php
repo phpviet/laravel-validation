@@ -13,6 +13,6 @@ return [
     'ip' => [
         'v4' => ':attribute phải là ipv4 tại Việt Nam.',
         'v6' => ':attribute phải là ipv6 tại Việt Nam.',
-        'default' => ':attribute phải là ip Việt Nam.'
-    ]
+        'default' => ':attribute phải là ip Việt Nam.',
+    ],
 ];
