@@ -17,7 +17,7 @@ use PHPViet\Laravel\Validation\Rules\MobileVN;
  */
 class MobileVNTest extends TestCase
 {
-    public function testValidId()
+    public function testValid()
     {
         $rule = new MobileVN();
         $mobile = '0909113911';
@@ -32,7 +32,7 @@ class MobileVNTest extends TestCase
         $this->assertEquals($mobile, array_shift($validMobile));
     }
 
-    public function testInvalidIp()
+    public function testInvalid()
     {
         $rule = new MobileVN();
         $mobile = '0909113911!@#';

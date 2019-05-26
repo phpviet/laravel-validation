@@ -17,7 +17,7 @@ use PHPViet\Laravel\Validation\Rules\IpVN;
  */
 class IpVNTest extends TestCase
 {
-    public function testValidCases()
+    public function testValid()
     {
         $rule = new IpVN();
         $ruleV4 = new IpVN(IpVN::IPV4);
@@ -45,7 +45,7 @@ class IpVNTest extends TestCase
         $this->assertEquals($ipv6, $validIps['ipv6']);
     }
 
-    public function testInvalidCases()
+    public function testInvalid()
     {
         $rule = new IpVN();
         $ip = '113.173.134.203@';

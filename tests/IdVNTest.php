@@ -17,7 +17,7 @@ use PHPViet\Laravel\Validation\Rules\IdVN;
  */
 class IdVNTest extends TestCase
 {
-    public function testValidId()
+    public function testValid()
     {
         $rule = new IdVN();
         $id = '025479661';
@@ -32,7 +32,7 @@ class IdVNTest extends TestCase
         $this->assertEquals($id, array_shift($validId));
     }
 
-    public function testInvalidIp()
+    public function testInvalid()
     {
         $rule = new IdVN();
         $id = '025479661123123123123';

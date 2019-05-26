@@ -17,7 +17,7 @@ use PHPViet\Laravel\Validation\Rules\LandLineVN;
  */
 class LandLineVNTest extends TestCase
 {
-    public function testValidId()
+    public function testValid()
     {
         $rule = new LandLineVN();
         $landLine = '02838574955';
@@ -32,7 +32,7 @@ class LandLineVNTest extends TestCase
         $this->assertEquals($landLine, array_shift($validLandLine));
     }
 
-    public function testInvalidIp()
+    public function testInvalid()
     {
         $rule = new LandLineVN();
         $landLine = '02838574955!@#';
