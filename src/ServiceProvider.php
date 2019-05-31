@@ -30,9 +30,9 @@ class ServiceProvider extends BaseServiceProvider implements DeferrableProvider
     protected function loadTrans(): void
     {
         $this->publishes([
-            __DIR__ . '/../resources/lang' => resource_path('lang/vendor/phpVietValidation'),
+            __DIR__.'/../resources/lang' => resource_path('lang/vendor/phpVietValidation'),
         ]);
-        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang/', 'phpVietValidation');
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang/', 'phpVietValidation');
     }
 
     protected function loadExt(): void
@@ -58,5 +58,4 @@ class ServiceProvider extends BaseServiceProvider implements DeferrableProvider
     {
         return ['validator'];
     }
-
 }
