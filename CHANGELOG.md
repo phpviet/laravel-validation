@@ -2,6 +2,10 @@
 
 Tất cả lịch sử tiến trình phát triển thư viện
 
+# 1.0.3
+
+- Sửa lỗi lazy load service provider đè lên thư viện.
+
 # 1.0.2
 
 - Cải thiện performance thông qua lazy load service provider.
