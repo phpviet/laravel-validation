@@ -6,9 +6,10 @@
  * @license [MIT](https://opensource.org/licenses/MIT)
  */
 
-namespace PHPViet\Laravel\Validation\Tests;
+namespace PHPViet\Laravel\Validation\Tests\Rules;
 
 use Illuminate\Support\Facades\Lang;
+use PHPViet\Laravel\Validation\Tests\TestCase;
 use PHPViet\Laravel\Validation\Rules\LandLineVN;
 
 /**
