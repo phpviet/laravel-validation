@@ -50,8 +50,8 @@ class ServiceProvider extends BaseServiceProvider
             'mobile_vn' => $this->app->make(MobileVN::class),
             'id_vn' => $this->app->make(IdVN::class),
             'ip_vn' => $this->app->make(IpVN::class),
-            'ipv4_vn' => $this->app->make(IpVN::class, [IpVN::IPV4]),
-            'ipv6_vn' => $this->app->make(IpVN::class, [IpVN::IPV6]),
+            'ipv4_vn' => $this->app->make(IpVN::class, ['version' => IpVN::IPV4]),
+            'ipv6_vn' => $this->app->make(IpVN::class, ['version' => IpVN::IPV6]),
         ];
     }
 }
