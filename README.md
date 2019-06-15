@@ -4,15 +4,19 @@
     </a>
     <h1 align="center">Laravel Validation</h1>
     <br>
+    <p align="center">
+    <a href="https://packagist.org/packages/phpviet/laravel-validation"><img src="https://img.shields.io/packagist/v/phpviet/laravel-validation.svg?style=flat-square" alt="Latest version"></a>
+    <a href="https://travis-ci.org/phpviet/laravel-validation"><img src="https://img.shields.io/travis/phpviet/laravel-validation/master.svg?style=flat-square" alt="Build status"></a>
+    <a href="https://scrutinizer-ci.com/g/phpviet/laravel-validation"><img src="https://img.shields.io/scrutinizer/g/phpviet/laravel-validation.svg?style=flat-square" alt="Quantity score"></a>
+    <a href="https://styleci.io/repos/187064051"><img src="https://styleci.io/repos/187064051/shield?branch=master" alt="StyleCI"></a>
+    <a href="https://packagist.org/packages/phpviet/laravel-validation"><img src="https://img.shields.io/packagist/dt/phpviet/laravel-validation.svg?style=flat-square" alt="Total download"></a>
+    <a href="https://packagist.org/packages/phpviet/laravel-validation"><img src="https://img.shields.io/packagist/l/phpviet/laravel-validation.svg?style=flat-square" alt="License"></a>
+    </p>
 </p>
 
-Laravel validation hổ trợ kiểm tra các kiểu dữ liệu đặc thù trong nước ta.
+## Thông tin
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/phpviet/laravel-validation.svg?style=flat-square)](https://packagist.org/packages/phpviet/laravel-validation)
-[![Build Status](https://img.shields.io/travis/phpviet/laravel-validation/master.svg?style=flat-square)](https://travis-ci.org/phpviet/laravel-validation)
-[![Quality Score](https://img.shields.io/scrutinizer/g/phpviet/laravel-validation.svg?style=flat-square)](https://scrutinizer-ci.com/g/phpviet/laravel-validation)
-[![StyleCI](https://styleci.io/repos/187064051/shield?branch=master)](https://styleci.io/repos/187064051)
-[![Total Downloads](https://img.shields.io/packagist/dt/phpviet/laravel-validation.svg?style=flat-square)](https://packagist.org/packages/phpviet/laravel-validation)
+Laravel validation hổ trợ kiểm tra các kiểu dữ liệu đặc thù trong nước ta.
 
 ## Cài đặt
 
