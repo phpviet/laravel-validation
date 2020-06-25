@@ -8,11 +8,11 @@
 
 namespace PHPViet\Laravel\Validation;
 
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use PHPViet\Laravel\Validation\Rules\IdVN;
 use PHPViet\Laravel\Validation\Rules\IpVN;
-use PHPViet\Laravel\Validation\Rules\MobileVN;
 use PHPViet\Laravel\Validation\Rules\LandLineVN;
-use Illuminate\Support\ServiceProvider as BaseServiceProvider;
+use PHPViet\Laravel\Validation\Rules\MobileVN;
 
 /**
  * @author Vuong Minh <vuongxuongminh@gmail.com>

@@ -8,8 +8,8 @@
 
 namespace PHPViet\Laravel\Validation\Rules;
 
-use PHPViet\Validation\Validator;
 use PHPViet\Validation\Rules\IpVN as BaseIpVN;
+use PHPViet\Validation\Validator;
 
 /**
  * @author Vuong Minh <vuongxuongminh@gmail.com>
